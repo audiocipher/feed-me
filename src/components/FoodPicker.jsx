@@ -22,7 +22,7 @@ class FoodPicker extends Component {
       food => food.toLowerCase() === this.state.foodInput.toLowerCase()
     );
 
-    if (!found) {
+    if (!found && this.state.foodInput) {
       let newFoods = [...this.state.foods, this.state.foodInput];
 
       this.setState({ foods: newFoods, foodInput: "" });
